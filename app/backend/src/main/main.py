@@ -110,7 +110,7 @@ def create_application() -> FastAPI:
     app.include_router(api_router, prefix=settings.API_V1_STR)
 
     # 정적 파일 서빙
-    app.mount("/", StaticFiles(directory="/Users/jonghyunjung/VisualStudioProjects/neonadeuli/app/backend/src/test/social-login-test/build", html=True), name="static")
+    # app.mount("/", StaticFiles(directory="/Users/qw119/desktop/project/neonadeuli-main/app/backend/src/test/social-login-test/build", html=True), name="static")
 
     return app
 

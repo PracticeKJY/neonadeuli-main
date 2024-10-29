@@ -1,6 +1,6 @@
 from asyncio.log import logger
 import secrets
-import aioredis
+import redis.asyncio as aioredis
 from redis import Redis
 import redis
 
