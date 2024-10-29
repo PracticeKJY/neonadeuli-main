@@ -1,4 +1,5 @@
 import "@/styles/index.css";
+import { Provider } from "jotai";
 
 export const metadata = {
   title: "Next.js",
@@ -7,16 +8,14 @@ export const metadata = {
 
 // 375*812 (ios) 크기.
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <div className="container">{children}</div>
-      </body>
+      <Provider>
+        <body>
+          <div className="container">{children}</div>
+        </body>
+      </Provider>
     </html>
   );
 }
